@@ -22,7 +22,11 @@ app.get('/article-one',function(req, res){
 });
 
 app.get('/article-two', function(req, res){
-    res.send('article two is displayed');
+    res.sendFile(path.join(__dirname, 'ui','airtcle-two.html'));
+});
+
+app.get('/article-three', function(req, res){
+    res.sednFile(path.join(__dirname, 'ui', 'article-three'));
 });
 
 app.get('/article-three', function(req, res){
