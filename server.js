@@ -16,7 +16,7 @@ var articles = {
 },
     'articletwo' : {
         title: 'Article Two',
-        heading: 'Article One',
+        heading: 'Article Two',
         date: 'Aug 20 2017',
         content: `<p>This is the paragraph tag.</p>
             <p>This is Another paragraph tag.</p>
@@ -24,7 +24,7 @@ var articles = {
 },
     'articlethree' : {
         title: 'Article Three',
-        heading: 'Article One',
+        heading: 'Article Three',
         date: 'Aug 22 2017',
         content: `<p>This is the paragraph tag.</p>
             <p>This is Another paragraph tag.</p>
