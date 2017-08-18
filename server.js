@@ -23,8 +23,8 @@ var articles = {
             <p>This is One more paragraph tag.</p>`
 },
     'articlethree' : {
-        title: 'Article Three',
-        heading: 'Article Three',
+        title: 'Article ',
+        heading: 'Article ',
         date: 'Aug 22 2017',
         content: `<p>This is the paragraph tag.</p>
             <p>This is Another paragraph tag.</p>
