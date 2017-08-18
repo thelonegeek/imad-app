@@ -7,26 +7,26 @@ app.use(morgan('combined'));
 
 var articles = { 
     'articleone' : {
-    title: 'Article One',
-    heading: 'Article One',
-    date: 'Aug 18 2017',
-    content: `<p>This is the paragraph tag.</p>
+        title: 'Article One',
+        heading: 'Article One',
+        date: 'Aug 18 2017',
+        content: `<p>This is the paragraph tag.</p>
             <p>This is Another paragraph tag.</p>
             <p>This is One more paragraph tag.</p>`
 },
     'articletwo' : {
         title: 'Article Two',
-    heading: 'Article One',
-    date: 'Aug 20 2017',
-    content: `<p>This is the paragraph tag.</p>
+        heading: 'Article One',
+        date: 'Aug 20 2017',
+        content: `<p>This is the paragraph tag.</p>
             <p>This is Another paragraph tag.</p>
             <p>This is One more paragraph tag.</p>`
-    },
+},
     'articlethree' : {
         title: 'Article Three',
-    heading: 'Article One',
-    date: 'Aug 22 2017',
-    content: `<p>This is the paragraph tag.</p>
+        heading: 'Article One',
+        date: 'Aug 22 2017',
+        content: `<p>This is the paragraph tag.</p>
             <p>This is Another paragraph tag.</p>
             <p>This is One more paragraph tag.</p>`
     }
@@ -34,7 +34,7 @@ var articles = {
 
 function createtemplate (data){
 
-    var title = data.title;
+   
     var heading = data.heading;
     var date = data.date;
     var content = data.content;
