@@ -22,5 +22,8 @@ body {
     font-family: sans-serif;
     padding-right: 50px;
     padding-left: 50px;
-    margin
+    
+}
+#yo{
+    border-radius: 40%;
 }
