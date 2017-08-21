@@ -1,5 +1,5 @@
 console.log('Loaded!');
-var k = document.getElementbyid('yo');
+var k = document.getElementById('yo');
 
 var moveright = 0;
 function moveRight() {
