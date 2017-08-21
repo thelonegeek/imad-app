@@ -70,20 +70,19 @@ return htmltemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
 app.get('/:articleName',function(req, res){
     // articleName = article-one 
     // articles[articleName] == { content of the object of articles
    var articleName = req.params.articleName;
    res.send(createtemplate(articles[articleName]));
 });
-
 
 var port = 80;
 app.listen(port, function () {
