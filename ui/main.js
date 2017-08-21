@@ -5,7 +5,7 @@ var img = document.getElementById('yo');
 margin = 0;
 function moveRight(){
     margin = margin + 5;
-    img.style.margin = margin + 'px';
+    img.style.marginleft = margin + 'px';
 }
 
 img.onclick = function () {
