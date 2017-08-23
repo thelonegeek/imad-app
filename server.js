@@ -86,7 +86,7 @@ app.get('/:articleName',function(req, res){
    res.send(createtemplate(articles[articleName]));
 });
 var counter = 0;
-app.get('/counter', function(req,res){
+app.get('/counter', function(req, res){
     counter = counter + 1;
     res.send(counter.toString());
 });
@@ -94,3 +94,18 @@ var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
