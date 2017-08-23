@@ -90,7 +90,7 @@ app.get('/counter', function(req, res){
     counter = counter + 1;
     res.send(counter.toString());
 });
-app.get('/ui/favicon.ico', function (req, res) {
+app.get('favicon.ico', function (req, res) {
 
   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
 
