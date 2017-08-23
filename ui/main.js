@@ -16,7 +16,7 @@ button.onclick = function () {
         
 };
     //Make the request
-    request.open('GET','http://vishalgangwar17.imad.hasura-app.io/', true);
+    request.open('GET','http://vishalgangwar17.imad.hasura-app.io/counter', true);
     request.send(null);
 };
 //animation on the picture 
