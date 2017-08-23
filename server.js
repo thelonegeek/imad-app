@@ -67,18 +67,18 @@ function createtemplate (data){
 `;
 return htmltemplate;
 }
-
+var counter = 0;
+app.get('/counter', function(req, res){
+    counter = counter + 1;
+    res.send(counter.toString());
+});
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
 });
-var counter = 0;
-app.get('/counter', function(req, res){
-    counter = counter + 1;
-    res.send(counter.toString());
-});
+
 app.get('/:articleName',function(req, res){
     // articleName = article-one 
     // articles[articleName] == { content of the object of articles
