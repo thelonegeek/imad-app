@@ -86,8 +86,8 @@ app.get('/:articleName',function(req, res){
    res.send(createtemplate(articles[articleName]));
 });
 var counter = 0;
-app.get('/counter', function(req, res){
-    counter = counter + 1;
+app.get('/q', function(req, res){
+    q = q + 1;
     res.send(counter.toString());
 });
 var port = 80;
