@@ -13,7 +13,6 @@ button.onclick = function () {
                 span.innerHTML = counter.toString(); 
             }
         }
-        
 };
     //Make the request
     request.open('GET','http://vishalgangwar17.imad.hasura-app.io/counter', true);
