@@ -1,9 +1,7 @@
 console.log('Loaded!');
-// clicked button increment value
 var button = document.getElementById('counter');
-
 button.onclick = function () {
-    //make a request to the counter  endpoint
+    //create a Request 
     var request = new XMLHttpRequest();
     //capture the response and store it in a variable
     request.onreadystatechange = function() {
@@ -11,17 +9,15 @@ button.onclick = function () {
             // Take Some Action
             if(request.status === 200){
                 var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString(); 
             }
         }
-        // if not done yet do this....
-        else{
-        }
-    };
-    // render the value of counter in the correct span
-   /* counter = counter + 1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString(); 
-   */
+        
+};
+    //Make the request
+    request.open('GET','http://vishalgangwar17.imad.hasura-app.io/', true);
+    request.send(null);
 };
 //animation on the picture 
 var img = document.getElementById('yo');
