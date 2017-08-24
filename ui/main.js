@@ -40,7 +40,6 @@ submit.onclick = function(){
                         }
                         var ul = document.getElementById('namelist');
                         ul.innerHTML = list;
-    
                 } 
           } 
     }; 
@@ -49,10 +48,6 @@ submit.onclick = function(){
     var name = nameInput.value;
     request.open('GET', 'http://vishalgangwar17.imad.hasura-app.io/submit-name?name=' + name, true);
     request.send(null); 
-    
 };
 
 // comments 
-
-var comment = document.getElementById('comments');
-var commmentss = ;
