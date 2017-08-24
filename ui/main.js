@@ -16,7 +16,7 @@ function exec(){
     }; 
     //MAKE THE REQUEST 
     request.open('GET', 'http://vishalgangwar17.imad.hasura-app.io/counter', true);
-    request.send(); 
+    request.send(null); 
     console.log('EXECUTED');
 }
 // submit button
@@ -47,7 +47,7 @@ submit.onclick = function(){
     //MAKE THE REQUEST 
     var nameInput = document.getElementById('name');
     var name = nameInput.value;
-    request.open('GET', 'http://vishalgangwar17.imad.hasura-app.io/submit-name=' + name, true);
-    request.send(); 
+    request.open('GET', 'http://vishalgangwar17.imad.hasura-app.io/submit-name?name=' + name, true);
+    request.send(null); 
     
 };
