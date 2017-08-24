@@ -54,14 +54,9 @@ function createtemplate (data){
                 <div>${date}</div>
                 <div>${content}</div>
         </div>
-        <div class="container">
-            <textarea rows="4" cols="40" name="comments" id="comments> </textarea>
-                <br/>
-            <input type="submit" value="submit" id="inputbutton" />
         </div>
     </body>
-</html>
-`;
+</html> `;
 return htmltemplate;
 }
 
@@ -81,10 +76,6 @@ app.get('/submit-name', function(req,res){
     res.send(JSON.stringify(names));
 });
 
-var comments = []
-app.get('/comments', function(req, res){
-    
-})
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
