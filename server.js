@@ -62,6 +62,7 @@ function createtemplate (data){
             ${content}
         </div>
         <textarea rows="4" cols="40" name="comment"> </textarea>
+        <input type="submit" value="comment" />
         </div>
         
     </body>
