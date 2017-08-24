@@ -33,12 +33,10 @@ var articles = {
 };
 
 function createtemplate (data){
-
     var title = data.title;
     var heading = data.heading;
     var date = data.date;
     var content = data.content;
-    
     var htmltemplate =`
     <html>
     <head>
@@ -48,22 +46,19 @@ function createtemplate (data){
     </head>
     <body>
         <div class="container">
-        <div> 
-            <a href="/">Home</a>
+            <div> 
+                <a href="/">Home</a>
+            </div>
+            <hr/>
+                <h3>${heading}</h3>
+                <div>${date}</div>
+                <div>${content}</div>
         </div>
-        
-        <hr/>
-        
-        <h3>${heading}</h3>
-        
-        <div>${date}</div>
-        
-        <div>
-            ${content}
+        <div class="container">
+            <textarea rows="4" cols="40" name="comment" id="comments> </textarea>
+                <br/>
+            <input type="submit" value="comment" id="inputbutton" />
         </div>
-        
-        </div>
-        
     </body>
 </html>
 `;
