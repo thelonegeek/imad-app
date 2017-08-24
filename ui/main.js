@@ -51,3 +51,8 @@ submit.onclick = function(){
     request.send(null); 
     
 };
+
+// comments 
+
+var comment = document.getElementById('comments');
+var commmentss = ;
