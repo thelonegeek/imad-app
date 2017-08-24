@@ -61,9 +61,9 @@ function createtemplate (data){
         <div>
             ${content}
         </div>
-        <textarea rows="4" cols="40" name="comment"> </textarea>
+        <textarea rows="4" cols="40" name="comment" id="comments> </textarea>
         <br/>
-        <input type="submit" value="comment" />
+        <input type="submit" value="comment" id="inputbutton" />
         </div>
         
     </body>
@@ -71,6 +71,7 @@ function createtemplate (data){
 `;
 return htmltemplate;
 }
+
 
 var counter = 0;
 app.get('/counter', function(req, res){
@@ -87,6 +88,10 @@ app.get('/submit-name', function(req,res){
     res.send(JSON.stringify(names));
 });
 
+var comments = []
+app.get('/comments', function(req, res){
+    
+})
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
