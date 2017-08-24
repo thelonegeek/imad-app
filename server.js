@@ -81,7 +81,7 @@ app.get('/submit-button'), function(req,res){
     names.push(name);
     // JSON :JAVASCRIPT OBJECT INTO STRONG
     res.send(JSON.stringify(names));
-}
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
