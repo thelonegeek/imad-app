@@ -73,6 +73,14 @@ app.get('/counter', function(req, res){
     counter = counter + 1;
     res.send(counter.toString());
 });
+var names = [];
+app.get('/submit-button'), function(req,res){
+    //get the name from the requesst
+    var name = req.params.name;
+    names.push(name);
+    // JSON :JAVASCRIPT OBJECT INTO STRONG
+    res.send(JSON.stringify(names));
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -95,14 +103,7 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/main.js' , function(req, res) {
     res.sendFile(path.join(__dirname,'ui','main.js'));
 });
-var names = [];
-app.get('/submit-button'), function(req,res){
-    //get the name from the requesst
-    var name = req.params.name;
-    names.push(name);
-    // JSON :JAVASCRIPT OBJECT INTO STRONG
-    res.send(JSON.stringify(names));
-}
+
 var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
