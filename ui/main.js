@@ -51,3 +51,22 @@ submit.onclick = function(){
 };
 
 // comments 
+
+var comment = document.getElementById('commentss');
+comment.onlick = function (){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
+            if(request.status === 200)
+            {
+                var comment = request.responseText;
+                var textarea = document.getElementById('textareas');
+                textarea.innerHTML = comment;
+                
+            }
+        }
+    };
+    request.open('GET','http://vishalgangwar17.imad.hasura-app.io/articleone', true);
+    request.send(null);
+};
