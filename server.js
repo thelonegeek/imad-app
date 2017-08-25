@@ -52,11 +52,13 @@ function createtemplate (data){
                 <div>${date}</div>
                 <div>${content}</div>
         </div>
+        <textarea rows="4" cols="40" id="textareass">Comment goes here</textarea>
+        <input type="submit" name="submit id="commentss">
+        <script type="text/javascript" src="/ui/main.js">
     </body>
 </html> `;
 return htmltemplate;
 }
-
 
 var counter = 0;
 app.get('/counter', function(req, res){
@@ -73,6 +75,12 @@ app.get('/submit-name', function(req,res){
     res.send(JSON.stringify(names));
 });
 
+var comments = [];
+app.get('/articleone', function(req, res){
+var comment = req.query.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
